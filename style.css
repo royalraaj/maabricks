@@ -1,0 +1,264 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: #8B4513; /* SaddleBrown - earthy tone for bricks */
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #c06c2d 3px solid;
+}
+
+header.container { /* Adjusted to be more specific */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.logo { /* Adjusted to be more specific */
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f0e68c; /* Khaki - for hover effect */
+}
+
+/* Hero Section Styles */
+#hero {
+    background: url('https://via.placeholder.com/1500x700.png?text=Brick+Wall+Background') no-repeat center center/cover; /* Replace with an actual background image */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+#hero::before { /* Overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hero.container { /* Adjusted to be more specific */
+    position: relative; /* To ensure content is above the overlay */
+    z-index: 1;
+}
+
+#hero h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #c06c2d; /* A lighter brown/orange */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #a0522d; /* Sienna - darker shade for hover */
+}
+
+/* Section General Styles */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section:nth-child(even) { /* Alternating background for sections */
+    background-color: #fff;
+}
+
+section h2 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #8B4513;
+}
+
+/* About Us Section Styles */
+#about.about-content { /* Adjusted to be more specific */
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#about.about-text { /* Adjusted to be more specific */
+    flex: 1;
+}
+
+#about.about-text p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+#about.about-image { /* Adjusted to be more specific */
+    flex: 1;
+    text-align: center;
+}
+
+#about.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Types of Bricks Section Styles (Previously Products) */
+#types-of-bricks.product-gallery { /* Adjusted to be more specific */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#types-of-bricks.product-item { /* Adjusted to be more specific */
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(50% - 40px); /* Adjust for 2 items per row, considering gap */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+#types-of-bricks.product-item:hover {
+    transform: translateY(-5px);
+}
+
+#types-of-bricks.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#types-of-bricks.product-item h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+/* Contact Us Section Styles */
+#contact-us { /* Changed ID */
+    background-color: #f4f4f4;
+}
+
+#contact-us.contact-details { /* Adjusted to be more specific */
+    text-align: center;
+    font-size: 18px;
+}
+
+#contact-us.contact-details p {
+    margin-bottom: 10px;
+}
+
+#contact-us.contact-details a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+#contact-us.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design Adjustments */
+@media(max-width: 768px) {
+    header.container { /* Adjusted to be more specific */
+        flex-direction: column;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    #hero h2 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    #about.about-content { /* Adjusted to be more specific */
+        flex-direction: column;
+    }
+
+    #types-of-bricks.product-item { /* Adjusted to be more specific */
+        width: calc(100% - 40px); /* Full width on smaller screens */
+    }
+}
