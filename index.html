@@ -5,84 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maa Bricks - Quality Red Bricks in Mangaldoi, Assam</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS will be provided in the style.css file. 
+           For brevity here, imagine the CSS from the next code block is in style.css */
+    </style>
 </head>
 <body>
 
     <header>
         <div class="container">
             <h1 class="logo">Maa Bricks</h1>
-            <nav>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
                 <ul>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#types-of-bricks">Types of Bricks</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#products">Our Bricks</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Building Trust, One Brick at a Time</h2>
-            <p>Your reliable source for high-quality red bricks in Mangaldoi, Assam.</p>
-            <a href="#types-of-bricks" class="cta-button">View Our Bricks</a>
-        </div>
-    </section>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Premium Red Bricks in Mangaldoi</h2>
+                <p>Building the foundation of Assam with strength and quality.</p>
+                <a href="#contact" class="btn btn-primary">Get a Quote</a>
+            </div>
+        </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Maa Bricks is a trusted name in brick manufacturing, located in the heart of Mangaldoi, Assam. We specialize in producing high-quality red bricks, essential for strong and durable constructions. Our commitment to quality and customer satisfaction has made us a preferred choice for builders and contractors in the region.</p>
-                    <p>We use traditional methods combined with modern quality checks to ensure every brick meets the highest standards. Choose Maa Bricks for reliability and excellence.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400x300.png?text=Maa+Bricks+Facility" alt="Maa Bricks Manufacturing">
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About Maa Bricks</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Maa Bricks is a leading manufacturer of high-quality red bricks, proudly serving Mangaldoi, Assam, and surrounding regions. With years of experience in the industry, we are committed to providing durable and reliable bricks for all your construction needs.</p>
+                        <p>Our manufacturing process combines traditional techniques with modern technology to ensure each brick meets stringent quality standards. We believe in sustainable practices and responsible sourcing of materials.</p>
+                        <p><strong>Our Mission:</strong> To be the most trusted brick supplier in Assam, contributing to strong and beautiful structures that last for generations.</p>
+                        <p><strong>Location:</strong> Mangaldoi, Assam</p>
+                    </div>
+                    <div class="about-image-placeholder">
+                        <p>Image of Maa Bricks Factory/Products</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="types-of-bricks">
-        <div class="container">
-            <h2>Types of Bricks We Offer</h2>
-            <div class="product-gallery">
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/300x200.png?text=Red+Brick+Type+1" alt="Standard Red Bricks">
-                    <h3>Standard Red Bricks</h3>
-                    <p>High-quality, durable red bricks perfect for all types of construction projects. Uniform in size and strength.</p>
+        <section id="products" class="content-section bg-light">
+            <div class="container">
+                <h2>Our Bricks (Red Bricks)</h2>
+                <p class="section-intro">We specialize in manufacturing high-quality red bricks suitable for various construction projects.</p>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image-placeholder"><span>Brick Type 1</span></div>
+                        <h3>Standard Red Bricks</h3>
+                        <p>Perfect for residential and commercial buildings. Known for their strength and classic look.</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image-placeholder"><span>Brick Type 2</span></div>
+                        <h3>Facing Bricks</h3>
+                        <p>Ideal for external walls where aesthetic appearance is crucial. Uniform color and texture.</p>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-image-placeholder"><span>Brick Type 3</span></div>
+                        <h3>Engineering Bricks</h3>
+                        <p>Designed for heavy-duty applications requiring high compressive strength and durability.</p>
+                    </div>
                 </div>
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/300x200.png?text=Red+Brick+Type+2" alt="Solid Red Bricks">
-                    <h3>Solid Red Bricks</h3>
-                    <p>Our solid red bricks offer excellent compressive strength and longevity for your building needs.</p>
-                </div>
-                </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section id="contact-us">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>We are located in Mangaldoi, Assam. Contact us for your red brick requirements.</p>
-            <div class="contact-details">
-                <p><strong>Maa Bricks</strong></p>
-                <p>Mangaldoi, Assam, India</p>
-                <p>Phone: <a href="tel:+910000000000">+91 (000) 000-0000</a> (Replace with actual number)</p>
-                <p>Email: <a href="mailto:info@maabricks.example.com">info@maabricks.example.com</a> (Replace with actual email)</p>
+        <section id="why-choose-us" class="content-section">
+            <div class="container">
+                <h2>Why Choose Maa Bricks?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Quality Assurance</h3>
+                        <p>Our bricks undergo rigorous testing to ensure they meet the highest quality standards for strength and durability.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Locally Manufactured</h3>
+                        <p>Proudly made in Mangaldoi, Assam, supporting local economy and ensuring fresh supply.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Eco-Friendly Process</h3>
+                        <p>We strive for sustainable manufacturing practices to minimize our environmental impact.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Competitive Pricing</h3>
+                        <p>Get the best value for your money with our high-quality bricks at competitive prices.</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="contact" class="content-section bg-dark">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="section-intro">We'd love to hear from you! Reach out for inquiries, quotes, or to discuss your project needs.</p>
+                <div class="contact-details">
+                     <p><strong>Maa Bricks</strong></p>
+                     <p>Mangaldoi, Assam, India</p>
+                     <p>Email: <a href="mailto:info@maabricks.example.com">info@maabricks.example.com</a> (Sample)</p>
+                     <p>Phone: <a href="tel:+911234567890">+91-123-456-7890</a> (Sample)</p>
+                </div>
+
+                <h3>Send us a Message</h3>
+                <div class="google-form-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqZHpX1PoXF57difK1Wb1NcYtoqjPsYwzv9JYI65UY2lQVFQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
             </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Maa Bricks. All Rights Reserved.</p>
-            <p>Website designed by Your Name/Company</p>
+            <p>&copy; <span id="currentYear"></span> Maa Bricks. All Rights Reserved.</p>
+            <p>Website designed with care.</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav ul');
+
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile nav if open after click
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        navToggle.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
