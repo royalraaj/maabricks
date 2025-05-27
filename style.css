@@ -1,264 +1,445 @@
-/* General Body Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+/* style.css */
+:root {
+    --primary-color: #c0392b; /* Brick Red */
+    --secondary-color: #7f8c8d; /* Asbestos Gray */
+    --dark-color: #2c3e50; /* Midnight Blue/Dark Gray */
+    --light-color: #ecf0f1; /* Clouds White */
+    --text-color: #34495e; /* Wet Asphalt Gray */
+    --font-family: 'Arial', sans-serif; /* Common, clean font */
+    --container-width: 1100px;
+    --base-spacing: 1rem;
+}
+
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #ffffff;
 }
 
 .container {
-    width: 85%;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 calc(var(--base-spacing) * 1.5);
 }
 
-/* Header Styles */
+/* Header & Navigation */
 header {
-    background: #8B4513; /* SaddleBrown - earthy tone for bricks */
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #c06c2d 3px solid;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: var(--base-spacing) 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header.container { /* Adjusted to be more specific */
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header.logo { /* Adjusted to be more specific */
-    font-family: 'Merriweather', serif;
-    font-size: 28px;
-    margin: 0;
-    color: #fff;
-    text-decoration: none;
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light-color);
 }
 
-header nav ul {
-    padding: 0;
-    margin: 0;
+.main-nav ul {
     list-style: none;
     display: flex;
 }
 
-header nav ul li {
-    margin-left: 20px;
+.main-nav ul li {
+    margin-left: calc(var(--base-spacing) * 2);
 }
 
-header nav ul li a {
-    color: #fff;
+.main-nav ul li a {
+    color: var(--light-color);
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1rem;
+    padding: 0.5rem 0;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #f0e68c; /* Khaki - for hover effect */
+.main-nav ul li a:hover,
+.main-nav ul li a.active-link { /* Add active link styling if needed with JS */
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
-/* Hero Section Styles */
-#hero {
-    background: url('https://via.placeholder.com/1500x700.png?text=Brick+Wall+Background') no-repeat center center/cover; /* Replace with an actual background image */
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-color);
     position: relative;
-}
-
-#hero::before { /* Overlay for better text readability */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#hero.container { /* Adjusted to be more specific */
-    position: relative; /* To ensure content is above the overlay */
-    z-index: 1;
-}
-
-#hero h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #c06c2d; /* A lighter brown/orange */
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #a0522d; /* Sienna - darker shade for hover */
-}
-
-/* Section General Styles */
-section {
-    padding: 60px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-section:nth-child(even) { /* Alternating background for sections */
-    background-color: #fff;
-}
-
-section h2 {
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #8B4513;
-}
-
-/* About Us Section Styles */
-#about.about-content { /* Adjusted to be more specific */
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-#about.about-text { /* Adjusted to be more specific */
-    flex: 1;
-}
-
-#about.about-text p {
-    margin-bottom: 15px;
-    font-size: 17px;
-}
-
-#about.about-image { /* Adjusted to be more specific */
-    flex: 1;
-    text-align: center;
-}
-
-#about.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-
-/* Types of Bricks Section Styles (Previously Products) */
-#types-of-bricks.product-gallery { /* Adjusted to be more specific */
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#types-of-bricks.product-item { /* Adjusted to be more specific */
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    width: calc(50% - 40px); /* Adjust for 2 items per row, considering gap */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-#types-of-bricks.product-item:hover {
-    transform: translateY(-5px);
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--light-color);
+    transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
 }
 
-#types-of-bricks.product-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.nav-toggle .hamburger::before {
+    top: -8px;
 }
 
-#types-of-bricks.product-item h3 {
-    font-family: 'Merriweather', serif;
-    font-size: 22px;
-    color: #8B4513;
-    margin-bottom: 10px;
+.nav-toggle .hamburger::after {
+    bottom: -8px;
 }
 
-/* Contact Us Section Styles */
-#contact-us { /* Changed ID */
-    background-color: #f4f4f4;
+/* Active state for hamburger icon (X) */
+.nav-toggle.active .hamburger {
+    transform: rotate(45deg);
+}
+.nav-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(90deg);
+}
+.nav-toggle.active .hamburger::after {
+    bottom: 0;
+    transform: rotate(90deg);
+    opacity: 0; /* Hide bottom bar for X, or adjust rotation */
 }
 
-#contact-us.contact-details { /* Adjusted to be more specific */
+
+/* Sections */
+main {
+    padding-top: 70px; /* Adjust based on header height */
+}
+
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://via.placeholder.com/1500x800.png?text=Maa+Bricks+Hero+Image') no-repeat center center/cover;
+    /* Replace placeholder URL with an actual image */
+    color: var(--light-color);
     text-align: center;
-    font-size: 18px;
+    padding: calc(var(--base-spacing) * 6) 0;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#contact-us.contact-details p {
-    margin-bottom: 10px;
+.hero-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: var(--base-spacing);
 }
 
-#contact-us.contact-details a {
-    color: #8B4513;
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: calc(var(--base-spacing) * 2);
+    max-width: 700px;
+}
+
+.content-section {
+    padding: calc(var(--base-spacing) * 4) 0;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: var(--base-spacing);
+    color: var(--dark-color);
+}
+
+.content-section .section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto calc(var(--base-spacing) * 3) auto;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+.bg-dark {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+.bg-dark h2, .bg-dark p, .bg-dark a {
+    color: var(--light-color);
+}
+.bg-dark .section-intro {
+    color: #bdc3c7; /* Lighter gray for dark background */
+}
+.bg-dark a:hover {
+    color: var(--primary-color);
+}
+
+
+/* About Us Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--base-spacing) * 3);
+    align-items: center;
+    margin-top: calc(var(--base-spacing) * 2);
+}
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+.about-text p {
+    margin-bottom: var(--base-spacing);
+}
+.about-image-placeholder {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust as needed */
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Products Section */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: calc(var(--base-spacing) * 2);
+    margin-top: calc(var(--base-spacing) * 2);
+}
+
+.product-item {
+    background-color: #fff;
+    padding: calc(var(--base-spacing) * 1.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.product-image-placeholder {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: var(--base-spacing);
+    font-size: 1.2rem;
+}
+
+.product-item h3 {
+    color: var(--dark-color);
+    margin-bottom: calc(var(--base-spacing) * 0.5);
+}
+
+/* Why Choose Us Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: calc(var(--base-spacing) * 2);
+    margin-top: calc(var(--base-spacing) * 2);
+}
+.feature-item {
+    text-align: center;
+    padding: var(--base-spacing);
+}
+.feature-item h3 {
+    color: var(--primary-color);
+    margin-bottom: calc(var(--base-spacing) * 0.5);
+}
+
+
+/* Contact Section */
+.contact-details {
+    text-align: center;
+    margin-bottom: calc(var(--base-spacing) * 2);
+}
+.contact-details p {
+    margin-bottom: calc(var(--base-spacing) * 0.5);
+}
+
+.google-form-container {
+    margin-top: calc(var(--base-spacing) * 2);
+    background-color: #fff; /* Optional: if form needs a contrasting background */
+    padding: var(--base-spacing); /* Optional padding around the form */
+    border-radius: 8px;
+    max-width: 750px; /* Control max width of the form area */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.google-form-container iframe {
+    width: 100%; /* Make iframe responsive within its container */
+    max-width: 700px; /* Original width of iframe from user */
+    height: 520px; /* Original height from user */
+    display: block; /* Remove extra space below iframe */
+    margin: 0 auto; /* Center iframe if container is wider */
+    border-radius: 6px; /* Optional: round corners of iframe */
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: calc(var(--base-spacing) * 0.8) calc(var(--base-spacing) * 2);
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#contact-us.contact-details a:hover {
-    text-decoration: underline;
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 2px solid var(--primary-color);
 }
 
-/* Footer Styles */
+.btn-primary:hover {
+    background-color: #a52f23; /* Darker shade of primary */
+    border-color: #a52f23;
+    transform: translateY(-2px);
+}
+
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background-color: var(--text-color);
+    color: var(--light-color);
     text-align: center;
-    padding: 30px 0;
+    padding: calc(var(--base-spacing) * 2) 0;
+    margin-top: calc(var(--base-spacing) * 2);
 }
 
 footer p {
-    margin: 5px 0;
+    margin-bottom: calc(var(--base-spacing) * 0.5);
+    font-size: 0.9rem;
 }
 
-/* Responsive Design Adjustments */
-@media(max-width: 768px) {
-    header.container { /* Adjusted to be more specific */
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px; /* Slightly smaller base font for mobile */
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .nav-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .main-nav ul {
+        display: none; /* Hide normal nav on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 65px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        padding: var(--base-spacing) 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .main-nav ul.active {
+        display: flex; /* Show when hamburger is clicked */
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: var(--base-spacing) calc(var(--base-spacing) * 1.5);
+        border-bottom: 1px solid #46637f; /* Separator for mobile nav items */
+    }
+    .main-nav ul li:last-child a {
+        border-bottom: none;
+    }
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active-link {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border-bottom-color: var(--primary-color); /* Ensure hover doesn't show separator */
+    }
+
+
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content {
         flex-direction: column;
     }
-
-    header nav ul {
-        margin-top: 15px;
-        flex-direction: column;
-        align-items: center;
+    .about-text, .about-image-placeholder {
+        flex: none; /* Reset flex basis */
+        width: 100%;
     }
 
-    header nav ul li {
-        margin: 5px 0;
+    /* Adjust iframe height for smaller screens if needed, though 520px might be too tall */
+    .google-form-container iframe {
+        height: 480px; /* Example: slightly reduce height on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: calc(var(--base-spacing) * 0.7) calc(var(--base-spacing) * 1.5);
+        font-size: 0.9rem;
     }
 
-    #hero h2 {
-        font-size: 36px;
-    }
-
-    #hero p {
-        font-size: 18px;
-    }
-
-    #about.about-content { /* Adjusted to be more specific */
-        flex-direction: column;
-    }
-
-    #types-of-bricks.product-item { /* Adjusted to be more specific */
-        width: calc(100% - 40px); /* Full width on smaller screens */
+    .google-form-container iframe {
+        height: 450px; /* Further reduce height for very small screens */
     }
 }
